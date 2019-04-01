@@ -1,0 +1,96 @@
+#include <iostream> 
+using namespace std;
+
+int gcd(int &a,int &b)
+{
+	if (a > 0 && b > 0)
+	{
+		int r;
+		r = a % b;
+		while (r < 0 || r > 0)
+
+		{
+
+			a = b;
+
+			b = r;
+
+			r = (a%b);
+
+		}
+		return r;
+	}
+	else
+	{
+		return 0;
+	}
+	
+}
+int reduce(int &a, int &b)
+{
+	int r;
+	if (a>0 && b>0)
+	{
+		a / (gcd(a, b) = a
+		b/ gcd(a, b) = b
+	}
+	else if (gcd(a,b)==0)
+	{
+		return 0;
+	}
+}
+
+void swap(int &x,int &y,int z)
+{
+
+	int temp = x;
+		x = y;
+	y = temp;
+
+}
+void sort3(int &a, int &b, int c)
+{
+	if (a <= b && b > c)
+	{
+		int temp = b;
+		b = c;
+		c = temp;
+	}
+	else 
+	{
+
+	}
+}
+
+
+	int main()
+	{
+		int x = 6, y = 3, z = 1;
+		int num1 = 8, denom1 = 4, num2 = 2, denom2 = 6;
+
+		sort3(x, y, z);
+		cout << "x: " << x << " "
+			<< "y: " << y << " "
+			<< "z: " << z << endl;
+		if (reduce(num1, denom1) == 1)
+		{
+			cout << "numerator: " << num1 << " denominator: " << denom1 << endl;
+		}
+		else
+		{
+		cout << "Arguments are not positive. Goodbye."; 
+		}
+
+		if (reduce(num2, denom2) == 1) 
+		{
+	   cout << "numerator: " << num2 << " denominator: " << denom2 << endl;
+		}
+		else 
+		{
+	   cout << "Arguments are not positive. Goodbye.";
+		}
+
+		system("pause");
+		return 0;
+
+}
